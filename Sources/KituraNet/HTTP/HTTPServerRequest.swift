@@ -224,10 +224,11 @@ public class HTTPServerRequest: ServerRequest {
         self.remoteAddress = HTTPServerRequest.host(socketAddress: channel.remoteAddress)
     }
 
-    var buffer: BufferList?
+    /// Current buffer 
+    public var buffer: BufferList?
 
     /// Default buffer size used for creating a BufferList
-    let bufferSize = 2048
+    public let bufferSize = 2048
 
     /**
      Read a chunk of the body of the request.
